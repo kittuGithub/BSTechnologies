@@ -1,0 +1,69 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-card>
+      <img mat-card-image src="assets/logo.png">
+    </mat-card>  
+    <!-- <mat-card class="profile-card">
+      <mat-card-header>
+        <div mat-card-avatar class="profile-header-image"></div>
+        <mat-card-title>Krishna</mat-card-title>
+        <mat-card-subtitle>UI Developer</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>    -->
+    <mat-nav-list>
+      <a mat-list-item routerLink="dashboard">
+        <mat-icon>dashboard</mat-icon><span class="side-menu-item">Dashboard</span></a>
+      <a mat-list-item routerLink="hireemployee">
+        <mat-icon>person</mat-icon><span class="side-menu-item">Hire Employee</span></a>
+      <a mat-list-item href="#">
+          <mat-icon>timer</mat-icon><span class="side-menu-item">TimeSheet</span></a>
+      <a mat-list-item href="#">
+          <mat-icon>work</mat-icon><span class="side-menu-item">Immigration</span></a>
+      <a mat-list-item href="#">
+          <mat-icon>group</mat-icon><span class="side-menu-item">Employess List</span></a>      
+      <a mat-list-item href="#">
+        <mat-icon>payment</mat-icon><span class="side-menu-item">Payments</span></a>      
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="top-toolbar">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+      </button>
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <!-- This fills the remaining space of the current row -->
+      <span class="example-fill-remaining-space"></span>
+      <!-- <span class="material-icon">search</span> -->
+      <!-- <mat-search-bar class="icon-spacing"></mat-search-bar> -->
+      <a href=""><mat-icon class="icon-spacing">notifications</mat-icon></a>
+      <a href=""><mat-icon class="icon-spacing">search</mat-icon></a>
+      <a href=""><mat-icon class="icon-spacing">settings</mat-icon></a>
+      <a href=""><mat-icon class="icon-spacing">logout</mat-icon></a>
+    </mat-toolbar>
+    <!-- <div class="col-md-3 col-sm-6 col-xs-12">
+      <div class="info-box">
+        <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
+        <div class="info-box-content">
+          <span class="info-box-text">CPU Traffic</span>
+          <span class="info-box-number">90<small>%</small></span>
+        </div>
+         /.info-box-content 
+      </div>
+      /.info-box
+    </div> -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

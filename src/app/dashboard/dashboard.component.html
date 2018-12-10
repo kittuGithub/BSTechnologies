@@ -1,0 +1,30 @@
+<mat-card class="dashboard-bg">
+  <mat-grid-list cols="3" rowHeight="2:1">
+    <mat-grid-tile>
+      <mat-card class="employee-data tile1">
+        <div>Total Employees</div>
+        <div>400</div>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="employee-data tile2">
+        <div>Immigrations Completed</div>
+        <div>300</div>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="employee-data tile3">
+        <div>Immigrations Pending</div>
+        <div>100</div>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+      <mat-card class="employee-chart">
+        <div id="chartdiv" [style.width.%]="100" [style.height.px]="280"></div>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-card>

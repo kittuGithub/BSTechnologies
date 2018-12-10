@@ -1,0 +1,36 @@
+.login-screen {
+    background-image: url("/assets/detroit-become-human-ps4-wallpaper-01.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+.app-header {
+    color: #000;
+    text-align: center;
+    padding: 1%;
+    -webkit-box-shadow: 2px 4px 58px -20px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 2px 4px 58px -20px rgba(0, 0, 0, 1);
+    box-shadow: 2px 4px 58px -20px rgba(0, 0, 0, 1);
+  }
+  
+  .loginBox {
+    max-width: 90%;
+    width: 500px;
+    background-color: goldenrod;
+    opacity: 0.9;
+    margin: 10% auto;
+  }
+  
+  .title-center {
+      margin: 0 auto;
+  }
+  .login-toolbar{
+      background: transparent;
+  }
+  
+  .example-container {
+    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+  }

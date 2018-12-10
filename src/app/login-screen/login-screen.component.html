@@ -1,0 +1,30 @@
+<div class="login-screen">
+  <div class="app-header">
+    <h1 class="app-heading">Human Resource Management System</h1>
+  </div>
+
+  <mat-card class="loginBox">
+    <mat-toolbar class="login-toolbar">
+      <span class="title-center">BlueSpace Technologies</span>
+    </mat-toolbar>
+    <div class="example-container">
+      <mat-form-field>
+        <input matInput type="text" placeholder="Username*" #username />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="password" placeholder="Password" #password />
+      </mat-form-field>
+    </div>
+    <div>
+      <button
+        mat-raised-button
+        color="accent"
+        (click)="checkLogin(username.value, password.value)"
+      >
+        Login
+      </button>
+      <span style="float: right; margin-top:10px;">Forgot password?</span>
+    </div>
+  </mat-card>
+</div>
